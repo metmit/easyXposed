@@ -17,21 +17,6 @@ public class Container {
     public static XC_LoadPackage.LoadPackageParam loadPackageParam = null;
 
     /**
-     * 抖音包名
-     */
-    public static final String AWEME_NAME = "com.ss.android.ugc.aweme";
-
-    /**
-     * 快手包名
-     */
-    public static final String KWAI_NAME = "com.smile.gifmaker";
-
-    /**
-     * 要hook的包名
-     */
-    public static final String[] HANDLE_APP_NAME = {AWEME_NAME, KWAI_NAME};
-
-    /**
      * 自定义配置
      */
     protected static Properties properties = null;

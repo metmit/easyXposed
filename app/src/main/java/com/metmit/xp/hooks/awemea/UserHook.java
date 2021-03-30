@@ -1,4 +1,4 @@
-package com.metmit.xp.aweme.hooks;
+package com.metmit.xp.hooks.awemea;
 
 import com.metmit.xp.utils.Container;
 import com.metmit.xp.utils.Helper;

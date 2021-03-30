@@ -1,4 +1,4 @@
-package com.metmit.xp.aweme.hooks;
+package com.metmit.xp.hooks.awemea;
 
 abstract public class DyBaseHook {
 }

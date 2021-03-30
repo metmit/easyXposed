@@ -4,9 +4,9 @@
 
 ## 使用
 
-1. 复制`./app/src/main/assets/config.example.properties`为`config.properties`，可以在此自定义配置
-2. 更改`Container`的`HANDLE_APP_NAME`属性值，增加要hook的包名
-3. 更改`HookMain`，增加hook入口。
+1. 复制`./app/src/main/assets/config.example.properties`为`config.properties`，在此自定义配置
+2. 更改`com.metmit.xp.Register`的`classArrayList`属性值，增加要hook的包的入口类
+3. 添加对应的hook入口类，实现`com.metmit.xp.constraint.Register`接口
 
 
 

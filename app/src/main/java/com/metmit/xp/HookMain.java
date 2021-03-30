@@ -1,11 +1,6 @@
 package com.metmit.xp;
 
-
-import com.metmit.xp.aweme.AwemeHook;
-import com.metmit.xp.kwai.KwaiHook;
 import com.metmit.xp.utils.Container;
-
-import java.util.Arrays;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
@@ -18,8 +13,10 @@ public class HookMain implements IXposedHookLoadPackage {
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam loadPackageParam) throws Throwable {
 
+        Register register = Register.getInstance();
+
         // 如果不是要处理的包，直接返回
-        if (!Arrays.asList(Container.HANDLE_APP_NAME).contains(loadPackageParam.packageName)) {
+        if (!register.hasResolved(loadPackageParam.packageName)) {
             return;
         }
 
@@ -28,13 +25,6 @@ public class HookMain implements IXposedHookLoadPackage {
             Container.loadPackageParam = loadPackageParam;
         }
 
-        if (loadPackageParam.packageName.equals(Container.AWEME_NAME)) {
-            new AwemeHook().register();
-        }
-
-        if (loadPackageParam.packageName.equals(Container.KWAI_NAME)) {
-            new KwaiHook().register();
-        }
-
+        register.register(loadPackageParam.packageName);
     }
 }

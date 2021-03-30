@@ -1,4 +1,4 @@
-package com.metmit.xp.kwai.hooks;
+package com.metmit.xp.hooks.kwai;
 
 abstract public class KsBaseHook {
 }
